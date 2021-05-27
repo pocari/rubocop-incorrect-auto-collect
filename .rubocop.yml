@@ -1,0 +1,178 @@
+require: rubocop-rails
+
+AllCops:
+  Exclude:
+    - bin/**/*
+    - containers/**/*
+    - db/**/*
+    - lib/tasks/ridgepole.rake
+    - node_modules/**/*
+    - vendor/**/*
+    - tmp/**/*
+  NewCops: enable
+  TargetRubyVersion: 2.7
+Layout/ClassStructure:
+  Enabled: true
+Layout/DotPosition:
+  EnforcedStyle: trailing
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+Layout/IndentationConsistency:
+  EnforcedStyle: normal
+Layout/LineLength:
+  Max: 160
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+Layout/SpaceInsideBlockBraces:
+  EnforcedStyle: space
+  SpaceBeforeBlockParameters: true
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
+Lint/EmptyWhen:
+  Enabled: false
+Lint/InheritException:
+  EnforcedStyle: standard_error
+Lint/RescueException:
+  Exclude:
+    - spec/**/*
+Lint/UnderscorePrefixedVariableName:
+  Enabled: false
+Lint/UnusedMethodArgument:
+  Enabled: false
+Lint/Void:
+  CheckForMethodsWithNoSideEffects: true
+Metrics/AbcSize:
+  Max: 24
+  Exclude:
+    - "**/metabow_sync/**/*.rb"
+Metrics/BlockLength:
+  Max: 100
+  Exclude:
+    - "**/*.rake"
+    - Gemfile
+    - Guardfile
+    - Rakefile
+    - config/**/*.rb
+    - spec/**/*.rb
+Metrics/ClassLength:
+  Max: 300
+Metrics/CyclomaticComplexity:
+  Max: 10
+Metrics/MethodLength:
+  Max: 50
+Metrics/ModuleLength:
+  Max: 300
+  Exclude:
+    - spec/**/*.rb
+Metrics/ParameterLists:
+  Max: 10
+Metrics/PerceivedComplexity:
+  Max: 8
+  Exclude:
+    - "**/metabow_sync/**/*.rb"
+Naming/MethodParameterName:
+  Enabled: false
+Naming/VariableNumber:
+  Exclude:
+    - "app/models/metabow_sync/**/*.rb"
+Rails:
+  Enabled: true
+Rails/HelperInstanceVariable:
+  Enabled: false
+Rails/RakeEnvironment:
+  Enabled: false
+Style/AccessModifierDeclarations:
+  Enabled: false
+Style/Alias:
+  EnforcedStyle: prefer_alias_method
+Style/AndOr:
+  EnforcedStyle: conditionals
+Style/AsciiComments:
+  Enabled: false
+Style/BlockDelimiters:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
+Style/CollectionMethods:
+  PreferredMethods:
+    detect: detect
+    find: detect
+    inject: inject
+    reduce: inject
+Style/CommentedKeyword:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Style/DoubleNegation:
+  Enabled: false
+Style/EmptyCaseCondition:
+  Enabled: false
+Style/EmptyElse:
+  EnforcedStyle: empty
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+Style/FormatString:
+  EnforcedStyle: percent
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/GuardClause:
+  MinBodyLength: 5
+Style/HashSyntax:
+  Exclude:
+    - "**/*.rake"
+    - Rakefile
+Style/IfInsideElse:
+  Enabled: false
+Style/IfUnlessModifier:
+  Enabled: false
+Style/Lambda:
+  EnforcedStyle: literal
+Style/MethodCalledOnDoEndBlock:
+  Enabled: true
+Style/NumericLiterals:
+  MinDigits: 7
+  Strict: true
+Style/NumericPredicate:
+  Enabled: false
+Style/OrAssignment:
+  Enabled: false
+Style/PerlBackrefs:
+  AutoCorrect: false
+Style/PreferredHashMethods:
+  EnforcedStyle: verbose
+Style/RedundantReturn:
+  AllowMultipleReturnValues: true
+Style/RedundantSelf:
+  Enabled: false
+Style/RescueModifier:
+  Enabled: false
+Style/RescueStandardError:
+  EnforcedStyle: explicit
+Style/SafeNavigation:
+  Enabled: false
+Style/Semicolon:
+  Exclude:
+    - spec/**/*_spec.rb
+    - spec/**/*_example.rb
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: double_quotes
+Style/StringMethods:
+  Enabled: true
+Style/SymbolArray:
+  Enabled: false
+Style/TernaryParentheses:
+  EnforcedStyle: require_parentheses_when_complex
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
+Style/WordArray:
+  Enabled: false
+Style/ZeroLengthPredicate:
+  Enabled: false
