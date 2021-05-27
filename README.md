@@ -59,3 +59,6 @@ module Hoge
 end
 
 Hoge::Foo.new.foo
+```
+
+The problem does not occur in Rubocop versions up to 1.8.1, but in 1.9.0 and later versions.
