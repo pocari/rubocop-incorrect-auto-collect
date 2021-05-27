@@ -1,3 +1,10 @@
+# setup
+
+```
+bundle install
+```
+
+# Reproduction Procedure
 ```
 % cat main.rb
 module Hoge
